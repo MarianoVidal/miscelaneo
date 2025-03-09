@@ -1,0 +1,16 @@
+@startuml
+class Sistema {}
+class RetweetHandler {}
+class Usuario {}
+class Tweet {}
+class Retweet {}
+
+Sistema --> Usuario
+Sistema -right-> RetweetHandler
+
+Usuario -left-> Tweet
+Usuario -right-> Retweet
+Usuario -up-> RetweetHandler
+
+Retweet --> Tweet
+@enduml
