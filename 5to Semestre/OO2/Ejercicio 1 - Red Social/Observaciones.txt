@@ -13,3 +13,8 @@ OBSERVACIONES Y COSAS A CORREGIR:
   demás referencias a un Tweet?
   
   Quizás tenga que utilizar un patrón de diseño.
+
+- Sistema podría ser un Singleton al que puede llamar
+  cualquier objeto/clase dentro del programa. Y podría
+  haber un Proxy que se encargue de manejar el
+  borrado de los Retweets
