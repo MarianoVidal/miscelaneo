@@ -1,0 +1,15 @@
+OBSERVACIONES Y COSAS A CORREGIR:
+- ¿Es válido utilizar una clase Sistema, o nos 
+   están pidiendo que hagamos otra cosa?
+
+- La parte mas difícil del ejercicio es el tema
+  de eliminar los Retweets desreferenciados. No
+  sé aún exactamente como encargarme del problema,
+  porque la idea que se me había ocurrido al final
+  no funcionaba, y tampoco parece óptima o
+  eficiente.
+  
+  ¿El sistema debería encargarse de eliminar las
+  demás referencias a un Tweet?
+  
+  Quizás tenga que utilizar un patrón de diseño.
