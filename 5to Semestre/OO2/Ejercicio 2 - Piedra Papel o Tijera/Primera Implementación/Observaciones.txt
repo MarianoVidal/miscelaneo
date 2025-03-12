@@ -1,0 +1,15 @@
+OBSERVACIONES Y COSAS A CORREGIR:
+- ¿Cómo decirle a una opción como responder
+  ante sus contrarios? ¿Sobrecarga?
+- Vamos a tener que utilizar un patrón de
+  comportamiento calculo, como el de mediador.
+- ¿Cómo extender la respuesta de un objeto
+  ante otros objetos?
+- ¿Cómo podemos averiguar el nombre de una
+  opción?
+- La solución que terminé implementando 
+  rompe la heurística de clase larga, y
+  además se ve feo que todo se arregle desde
+  la clase Partida.
+- Aún me queda implementar las últimas dos
+  opciones.
