@@ -1,0 +1,6 @@
+OBSERVACIONES Y COSAS A CORREGIR:
+- Ahora las clases son mas fáciles de extender por
+  lo menos, pero el problema es que no están los
+  mensajes personalizados que necesita cada combate,
+  y que la clase Opcion es bastante grande.
+- No creo que esté bien, pero es una mejora.
