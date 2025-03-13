@@ -1,0 +1,46 @@
+@startuml
+
+class Partida {
++Partida(opcionJugador1: Opcion, opcionJugador2: Opcion)
++jugar(): String
+}
+
+abstract class Opcion {
+-nombreElemento: String
+-ganaContra: String[]
++Opcion(nombreElemento: String)
++getNombreElemento(): String
++jugarContra(nombre: String): String
+#siEsElMismoElemento(nombre: String): Boolean
+#siLeGana(nombre: String): Boolean
+#definirContraQuienGana(vector: String[])
+-streamizer(vector: String[]): Stream<String>
+-anunciarResultado(motivo: String, otroNombre: String): String
+}
+
+class Tijera extends Opcion {
+-ganaContra: String[]
++Tijera()
+}
+class Piedra extends Opcion {
+-ganaContra: String[]
++Piedra()
+}
+
+class Papel extends Opcion {
+-ganaContra: String[]
++Papel()
+}
+
+class Lagarto extends Opcion {
+-ganaContra: String[]
++Lagarto()
+}
+
+class Spock extends Opcion {
+-ganaContra: String[]
++Spock()
+}
+
+Partida --> Opcion: 2
+@enduml
