@@ -1,0 +1,16 @@
+@startuml
+
+interface IPost {}
+class Twitter {}
+class Usuario {}
+class Tweet implements IPost {}
+class Retweet implements IPost {}
+
+Twitter --> Usuario: usuarios 0..*
+
+Usuario -down-> IPost: posteos 0..*
+
+Tweet -right-> Retweet: reposteos 0..*
+Retweet -left-> Tweet: tweetOrigen 1
+
+@enduml
