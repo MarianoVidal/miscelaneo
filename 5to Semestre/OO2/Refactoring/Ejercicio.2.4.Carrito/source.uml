@@ -1,0 +1,26 @@
+@startuml
+
+!theme vibrant
+skinparam classAttributeIconSize 0
+
+class Carrito {
++total(): Real
+}
+
+class ItemCarrito {
+-cantidad: Integer
++getProducto(): Producto
++getCantidad(): Integer
++calcularPrecioTotal(): Real
+}
+
+class Producto {
+-nombre: String
+-precio: Real
++getPrecio(): Real
+}
+
+Carrito -right-> ItemCarrito: items
+ItemCarrito -right-> Producto: producto
+
+@enduml
