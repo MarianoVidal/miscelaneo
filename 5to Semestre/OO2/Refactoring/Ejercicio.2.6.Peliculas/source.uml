@@ -1,0 +1,37 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class HBOO {}
+
+class Usuario {
+-nombre: String
+-telefono: Integer
+-email: String
++calcularCostoPelicula(pelicula: Pelicula): Real
+}
+
+class Pelicula {
+-nombre: String 
+-genero: String 
+-fechaEstreno: Date 
+-costo: Real 
++getCosto(): Real 
++calcularCargoExtraPorExtreno(): Real
+}
+
+interface ISubscripcion {
++<<abstract>> calcularCostoPelicula(pelicula: Pelicula): Real
+}
+
+class SubscripcionBasica implements ISubscripcion {}
+class SubscripcionFamilia implements ISubscripcion {}
+class SubscripcionPlus implements ISubscripcion {}
+class SubscripcionPremium implements ISubscripcion {}
+
+HBOO -right-> Usuario: usuarios 0..*
+HBOO -down-> Pelicula: peliculas 0..*
+Usuario -down-> Pelicula: peliculasCompradas 0..*
+Usuario -right-> ISubscripcion: subscripcion
+
+@enduml
