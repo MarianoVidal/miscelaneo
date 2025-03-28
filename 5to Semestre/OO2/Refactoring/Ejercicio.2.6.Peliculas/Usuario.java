@@ -2,7 +2,7 @@ package unlp.oo2.refactoring;
 
 import java.util.List;
 
-public abstract class Usuario {
+public class Usuario {
 	String nombre;
 	int telefono;
     String email;

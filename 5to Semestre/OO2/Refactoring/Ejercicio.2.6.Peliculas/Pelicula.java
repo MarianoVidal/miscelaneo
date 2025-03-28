@@ -14,12 +14,14 @@ public class Pelicula {
     }
     
     public double calcularCargoExtraPorEstreno(){
-	// Si la Película se estrenó 30 días antes de la fecha actual, retorna un cargo de 0$, 
-    // caso contrario, retorna un cargo extra de 300$
-    	return (ChronoUnit.DAYS.between(this.fechaEstreno, LocalDate.now()) ) > 30 ? 0 : 300;
+    	return (estrenoOcurrioHaceUnMes() ? 0 : 300);
     }
 
 	double calcularCostoTotal() {
 		return getCosto() + calcularCargoExtraPorEstreno();
+	}
+	
+	private boolean estrenoOcurrioHaceUnMes() {
+		return (ChronoUnit.DAYS.between(this.fechaEstreno, LocalDate.now()) > 30);
 	}
 }
