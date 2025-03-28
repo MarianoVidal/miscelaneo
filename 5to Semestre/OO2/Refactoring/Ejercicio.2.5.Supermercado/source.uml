@@ -1,0 +1,24 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Supermercado {
++notificarPedido(pedido: Pedido)
+}
+
+class Pedido {
+-nroPedido: Real
++getNroPedido(): Real
++getDireccion(): Direccion
+}
+
+class Direccion {
++localidad: String 
++calle: String 
++numero: String 
++departamento: String
++toString(): String
+}
+
+Pedido *--> Direccion: -direccion
+@enduml
