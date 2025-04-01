@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package biblioteca;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,20 +39,7 @@ public class BibliotecaTest {
 		listaPrueba.add(socio1);
 		listaPrueba.add(socio2);
 		
-		String cadena =""
-				+"["
-				+"\n	{"
-				+"\n		\"nombre\": \""+socio1.getNombre()+"\","
-				+"\n		\"email\": \""+socio1.getEmail()+"\","
-				+"\n		\"legajo\": \""+socio1.getLegajo()+"\""
-				+"\n	},"
-				+"\n	{"
-				+"\n		\"nombre\": \""+socio2.getNombre()+"\","
-				+"\n		\"email\": \""+socio2.getEmail()+"\","
-				+"\n		\"legajo\": \""+socio2.getLegajo()+"\""
-				+"\n	}"
-				+"\n]"
-				+"";
+		String cadena = "["+socio1.toString() + "," + socio2.toString() + "]";
 		
 		Assertions.assertEquals(cadena, biblioteca.exportarSocios());
 	}
