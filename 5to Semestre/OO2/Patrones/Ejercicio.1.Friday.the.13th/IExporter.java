@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package biblioteca;
 
 import java.util.List;
 

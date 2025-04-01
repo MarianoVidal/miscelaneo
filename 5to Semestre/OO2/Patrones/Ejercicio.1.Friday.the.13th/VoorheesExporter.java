@@ -1,16 +1,11 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package biblioteca;
 
 import java.util.List;
 
 public class VoorheesExporter implements IExporter {
 
 	private String exportar(Socio socio) {
-		String separator = System.lineSeparator();
-		return "\t{" + separator
-			+ "\t\t\"nombre\": \"" + socio.getNombre() + "\"," + separator
-			+ "\t\t\"email\": \"" + socio.getEmail() + "\"," + separator
-			+ "\t\t\"legajo\": \"" + socio.getLegajo() + "\"" + separator
-			+ "\t}";
+		return socio.toString();
 	}
 
 	public String exportar(List<Socio> socios) {

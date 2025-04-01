@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package biblioteca;
 
 public class Socio {
 	private String nombre;
@@ -29,5 +29,10 @@ public class Socio {
 	}
 	public void setLegajo(String legajo) {
 		this.legajo = legajo;
+	}
+	
+	public String toString() {
+		String cadena = "{\"legajo\":\"" + this.getLegajo() + "\"," + "\"nombre\":\"" +this.getNombre() + "\",\"email\":\"" + this.getEmail() + "\"}";
+		return cadena;
 	}
 }

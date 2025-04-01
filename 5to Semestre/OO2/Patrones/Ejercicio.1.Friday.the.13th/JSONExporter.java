@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo2.biblioteca;
+package biblioteca;
 
 import java.util.List;
 
@@ -24,10 +24,10 @@ public class JSONExporter implements IExporter {
 		}
 		
 		JSONArray vectorJSON = new JSONArray();
-		socios.forEach(soc -> vectorJSON.add(soc));
-		JSONParser parser = new JSONParser();
-		
-		System.out.println(vectorJSON.toString());
+		socios.forEach(soc -> {
+			JSONObject temp = exportar(soc);
+			vectorJSON.add(temp);
+		});
 		
 		return vectorJSON.toJSONString();
 	}
