@@ -39,31 +39,21 @@ public class BibliotecaTest {
 		listaPrueba.add(socio1);
 		listaPrueba.add(socio2);
 		
-		Assertions.assertEquals(biblioteca.exportarSocios(), this.exportar(listaPrueba));
-	}
-	
-	// Copié y pegué los mismos metodos pq yolo
-	private String exportar(Socio socio) {
-		String separator = System.lineSeparator();
-		return "\t{" + separator
-			+ "\t\t\"nombre\": \"" + socio.getNombre() + "\"," + separator
-			+ "\t\t\"email\": \"" + socio.getEmail() + "\"," + separator
-			+ "\t\t\"legajo\": \"" + socio.getLegajo() + "\"" + separator
-			+ "\t}";
-	}
-
-	public String exportar(List<Socio> socios) {
-		String separator = System.lineSeparator();
-		StringBuilder buffer = new StringBuilder("[" + separator);
-		socios.forEach(socio -> {
-			buffer.append(this.exportar(socio))
-				.append(",")
-				.append(separator);
-		});
+		String cadena =""
+				+"["
+				+"\n	{"
+				+"\n		\"nombre\": \""+socio1.getNombre()+"\","
+				+"\n		\"email\": \""+socio1.getEmail()+"\","
+				+"\n		\"legajo\": \""+socio1.getLegajo()+"\""
+				+"\n	},"
+				+"\n	{"
+				+"\n		\"nombre\": \""+socio2.getNombre()+"\","
+				+"\n		\"email\": \""+socio2.getEmail()+"\","
+				+"\n		\"legajo\": \""+socio2.getLegajo()+"\""
+				+"\n	}"
+				+"\n]"
+				+"";
 		
-		// remueve la última coma y fin de línea
-		buffer.setLength(buffer.length() - (separator.length() + 1));
-		buffer.append(separator).append("]");
-		return buffer.toString();
+		Assertions.assertEquals(cadena, biblioteca.exportarSocios());
 	}
 }
