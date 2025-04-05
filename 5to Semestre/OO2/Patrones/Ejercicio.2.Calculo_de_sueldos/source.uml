@@ -1,0 +1,36 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+abstract class Empleado {
++obtenerSueldo(): Real
+#<<abstract>>calcularSueldoBasico(): Real
+#<<abstract>>calcularSueldoAdicional(): Real
+#sueldo(): Real
+-calcularDescuento(): Real
+}
+
+abstract class NoPasante extends Empleado {
+-esCasado: Boolean
+-cantidadHijos: Integer
++NoPasante(esCasado: Boolean, cantidadHijos: Integer)
+-montoPorCasado(): Real
+-montoPorHijos(): Real
+}
+
+class Pasante extends Empleado {
+-cantidadExamenesRendidos: Integer
++Pasante(cantidadExamenesRendidos: Integer)
+}
+
+class EmpleadoTemporario extends NoPasante {
+-cantidadHoras: Integer
++EmpleadoTemporario(esCasado: Boolean, cantidadHijos: Integer, cantidadHoras: Integer)
+}
+
+class EmpleadoPlanta extends NoPasante {
+-cantidadAñosAntiguedad: Integer
++EmpleadoTemporario(esCasado: Boolean, cantidadHijos: Integer, cantidadAñosAntiguedad: Integer)
+}
+
+@enduml
