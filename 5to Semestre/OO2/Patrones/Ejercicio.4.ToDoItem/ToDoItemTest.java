@@ -103,6 +103,10 @@ public class ToDoItemTest {
     	item2.addComment("Pepe");
     	item2.addComment("Pepe");
     	
+    	item4.cambiarEstado(new FinishedItem());
+    	item4.addComment("Pepe");
+    	
     	Assertions.assertEquals(2, item2.getComentarios().size());
+    	Assertions.assertEquals(0, item4.getComentarios().size());
     }
 }
