@@ -1,0 +1,16 @@
+@startuml
+
+class MediaPlayer {}
+
+interface Media {}
+
+class Audio implements Media {}
+class VideoFile implements Media {}
+class MediaVideoStream implements Media {}
+
+class VideoStream {}
+
+MediaPlayer -right-> Media: media *
+MediaVideoStream --* VideoStream
+
+@enduml
