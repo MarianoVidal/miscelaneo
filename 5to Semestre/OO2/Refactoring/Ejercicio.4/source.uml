@@ -1,0 +1,34 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class Pedido {
++<<create>>Pedido(cliente: Cliente, productos: Producto[*], formaPago: IFormaPago): Pedido
++getCostoTotal(): Real
+-getCostoProductos(): Real
+}
+
+class Cliente {
++fechaAlta: Date
++getFechaAlta(): Date
++calcularAñosDesdeFechaAlta(): Integer
+}
+
+class Producto {
++precio: Real
++getPrecio(): Real
+}
+
+interface IFormaPago {
++<<abstract>>calcularValor(costo: Real): Real
+}
+
+class FormaPagoEfectivo implements IFormaPago {}
+class FormaPagoSeisCuotas implements IFormaPago {}
+class FormaPagoDoceCuotas implements IFormaPago {}
+
+Pedido *-down-> IFormaPago: -formaPago
+Pedido -left-> Cliente: cliente 1
+Pedido *-right-> Producto: productos
+
+@enduml
