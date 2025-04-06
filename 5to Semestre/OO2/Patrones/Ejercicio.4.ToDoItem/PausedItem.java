@@ -8,4 +8,8 @@ public class PausedItem extends EstadoItem {
     public void togglePause(ToDoItem context) {
     	context.cambiarEstado(new FinishedItem());
     }
+
+    public void addComment(ToDoItem context, String comment) {
+    	context.getComentarios().add(comment);
+    }
 }

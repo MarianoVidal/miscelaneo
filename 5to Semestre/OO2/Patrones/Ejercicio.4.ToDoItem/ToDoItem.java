@@ -1,23 +1,25 @@
 package unlp.oo2.patrones.ej4;
 
 import java.time.Duration;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoItem {
         private String name;
         private EstadoItem estado;
-        private LocalDate tiempoInicial;
-        private LocalDate tiempoFinal;
+        private LocalDateTime tiempoInicial;
+        private LocalDateTime tiempoFinal;
         private List<String> comentarios;
 
         // El objeto recien creado arranca con el estado 'PENDING'
         public ToDoItem(String name) {
         	this.estado = new PendingItem();
-            this.tiempoInicial = LocalDate.now();
+            this.tiempoInicial = LocalDateTime.now();
             this.comentarios = new ArrayList<String>();
         }
+        
+        public ToDoItem() {}
 
         public void start() {
         	this.estado.start(this);
@@ -41,11 +43,20 @@ public class ToDoItem {
 
 
         public void addComment(String comment) {
-        	this.comentarios.add(comment);
+        	this.estado.addComment(this, comment);
         }
         
         // Parte del patrón State
         public void cambiarEstado(EstadoItem nuevoEstado) {
         	this.estado = nuevoEstado;
+        }
+        
+        // Debug
+        public EstadoItem getEstado() {
+        	return this.estado;
+        }
+        
+        public List<String> getComentarios() {
+        	return this.comentarios;
         }
 }

@@ -6,6 +6,10 @@ public class PendingItem extends EstadoItem {
     }
     
     public void togglePause(ToDoItem context) {
-    	
+    	// Nada
+    }
+    
+    public void addComment(ToDoItem context, String comment) {
+    	context.getComentarios().add(comment);
     }
 }

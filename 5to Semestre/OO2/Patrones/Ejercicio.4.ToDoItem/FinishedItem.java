@@ -8,5 +8,10 @@ public class FinishedItem extends EstadoItem {
     }
     
     public void togglePause(ToDoItem context) {
+    	// Nada
+    }
+    
+    public void addComment(ToDoItem context, String comment) {
+    	// Nada
     }
 }
