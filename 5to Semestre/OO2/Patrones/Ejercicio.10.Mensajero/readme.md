@@ -10,3 +10,4 @@
 - Preguntar si está bien la forma en la que implementé los métodos calcularProporcionAgua() y equals() en la clase TopografiaMixta.
 - En este ejercicio, lo que se pide que puedan comunicar todas las clases es que digan su proporción de agua y si son iguales a otro componente.
 - Cuando se utiliza este patrón, hay que hacer un balance entre seguridad y transparencia en la declaración de operaciones, y ver cual se prefiere sacrificar de las dos. Yo en este caso preferí sacrificar la transparencia antes que la seguridad, ya que no quería que las hojas tuvieran un método agregarComponente() o siHayUnCompuesto(), no tenía sentido
+- Como tuve que implementar el método esUnCompuesto() y getComponentes(), y vi que el equals() entre TopografiaAgua y TopografiaTierra era el mismo, decidí crear otra clase abstracta TopografiaElemental
