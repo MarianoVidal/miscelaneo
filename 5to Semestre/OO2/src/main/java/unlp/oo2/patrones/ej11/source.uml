@@ -1,0 +1,37 @@
+@startuml
+
+abstract class Topografia <<Component>> {
++<<abstract>>calcularProporcionAgua(): Real
++<<abstract>>esUnCompuesto(): Boolean
++<<abstract>>getComponentes(): Topografia[*]
+}
+
+abstract class TopografiaElemental {
++esUnCompuesto(): Boolean
++equals(t: Topografia): Boolean
++getComponentes(): Topografia[*]
+}
+
+class TopografiaAgua <<Leaf>> {
++calcularProporcionAgua(): Real
+}
+
+class TopografiaTierra <<Leaf>> {
++calcularProporcionAgua(): Real
+}
+
+class TopografiaMixta <<Composite>> {
++calcularProporcionAgua(): Real
++equals(t: Topografia): Boolean
++esUnCompuesto(): Boolean
++getComponentes(): Topografia[*]
++agregarComponente(t: Topografia)
+}
+
+Topografia <|-down- TopografiaElemental
+Topografia <|-down- TopografiaMixta
+TopografiaElemental <|-down- TopografiaAgua 
+TopografiaElemental <|-down- TopografiaTierra 
+TopografiaMixta -- Topografia : componentes 0..*
+
+@enduml
