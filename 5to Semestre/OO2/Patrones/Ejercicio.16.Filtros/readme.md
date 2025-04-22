@@ -15,3 +15,10 @@
 - a. Si, se distingue, pero la implementación no es la mas óptima. En este caso no hay mucho problema porque el orden de los filtros se mantiene cuando se pasan como argumentos para el programa, pero si se quisiera implementar esto mismo en una red social, tendría que replantearse el diseño
 - b. Creo que sí.
 - c. El único olor que encuentro es que las estrategias piden como parámetro la imagen en vez de la clase que hace el rol de Contexto en este sistema, el PNGFilterLauncher. Esto indica que quizás se tenga que utilizar el patrón Decorator.
+## Inciso B
+![Diagrama UML 2](./diag_uml_2.png)<br>
+[Código UML 2](./source2.uml)
+### Notas
+- Se utiliza el patrón Decorator.
+- a. Si, se distingue, aunque no hay ningún DecoradorConcreto
+- b. Creo que sí.
