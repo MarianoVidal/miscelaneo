@@ -1,0 +1,31 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface DatabaseAccess <<Subject>> {
++<<abstract>> insertNewRow(rowData: String[*]): Integer 
++<<abstract>> getSearchResults(queryString: String): String[*]
+}
+
+class DatabaseRealAccess <<RealSubject>> implements DatabaseAccess {
+-database
++insertNewRow(rowData: String[*]): Integer 
++getSearchResults(queryString: String): String[*]
+}
+class DatabaseProxy <<Proxy>> implements DatabaseAccess {
++insertNewRow(rowData: String[*]): Integer 
++getSearchResults(queryString: String): String[*]
+}
+
+class Usuario {
+-nombreUsuario: String
+-logueado: Boolean
++conectarse()
++introducirNuevaFila(rowData: String[*])
++obtenerResultadosBusqueda(queryString: String): String[*]
+}
+
+DatabaseProxy -left-> DatabaseRealAccess: databaseAccess
+Usuario -down-> DatabaseProxy: databaseProxy
+
+@enduml
