@@ -1,21 +1,51 @@
 @startuml
 
-class Equipo {}
+skinparam classAttributeIconSize 0
 
-abstract class EquipoBuilder <<Builder>> {}
+class Equipo {
++calcularPrecio(): Real
++calcularConsumo(): Real
+-calcularIVA(): Real
+}
+
+abstract class EquipoBuilder <<Builder>> {
++<<abstract>> colocarProcesador(componente: c)
++<<abstract>> colocarMemoriaRAM(componente: c)
++<<abstract>> colocarDisco(componente: c)
++<<abstract>> colocarTarjetaGrafica(componente: c)
++<<abstract>> colocarGabinete(componente: c)
++construirEquipo(): Equipo
+}
+
 class EquipoBasicoBuilder <<ConcreteBuilderA>> extends EquipoBuilder {}
 class EquipoIntermedioBuilder <<ConcreteBuilderB>> extends EquipoBuilder {}
 class EquipoGamerBuilder <<ConcreteBuilderC>> extends EquipoBuilder {}
 
-class Presupuesto {}
+class Presupuesto {
+-nombreSolicitante: String
+-fechaRealizacion: Date
++calcularPresupuesto(): Real
+}
 
-class Componente <<Component, Leaf>> {}
+class Componente <<Component, Leaf>> {
+-nombre: String
+-descripcion: String
+-precio: Real
+-consumo: Real
++getNombre(): String
++getDescripcion(): String
++getPrecio(): Real
++getConsumo(): Real
+}
+
 abstract class Gabinete extends Componente {}
 class GabineteEstandar extends Gabinete {}
 class GabineteIntermedio extends Gabinete {}
 class GabineteGamer <<Composite>> extends Gabinete {}
 
-class Catalogo {}
+class Catalogo {
++getComponente(descripcion: String): Componente
+}
 
 class Tecnico {}
 
@@ -25,11 +55,12 @@ EquipoBasicoBuilder ..> Equipo
 EquipoIntermedioBuilder ..> Equipo
 EquipoGamerBuilder ..> Equipo
 
-Catalogo --> Componente: - componentes *
+Equipo --> Componente: - componentes *
+Catalogo -right-> Componente: - componentes *
 
-Presupuesto -right-> Equipo
+Presupuesto -up-> Equipo
 
 Tecnico --> EquipoBuilder: constructor
-Tecnico -right-> Catalogo: catalogo
+Tecnico -left-> Catalogo: catalogo
 
 @enduml
