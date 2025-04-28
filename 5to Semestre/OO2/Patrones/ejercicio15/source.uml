@@ -9,11 +9,11 @@ class Equipo {
 }
 
 abstract class EquipoBuilder <<Builder>> {
-+<<abstract>> colocarProcesador(componente: c)
-+<<abstract>> colocarMemoriaRAM(componente: c)
-+<<abstract>> colocarDisco(componente: c)
-+<<abstract>> colocarTarjetaGrafica(componente: c)
-+<<abstract>> colocarGabinete(componente: c)
++<<abstract>> colocarProcesador()
++<<abstract>> colocarMemoriaRAM()
++<<abstract>> colocarDisco()
++<<abstract>> colocarTarjetaGrafica()
++<<abstract>> colocarGabinete()
 +construirEquipo(): Equipo
 }
 
