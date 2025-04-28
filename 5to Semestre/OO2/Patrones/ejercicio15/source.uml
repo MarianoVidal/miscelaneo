@@ -1,0 +1,35 @@
+@startuml
+
+class Equipo {}
+
+abstract class EquipoBuilder <<Builder>> {}
+class EquipoBasicoBuilder <<ConcreteBuilderA>> extends EquipoBuilder {}
+class EquipoIntermedioBuilder <<ConcreteBuilderB>> extends EquipoBuilder {}
+class EquipoGamerBuilder <<ConcreteBuilderC>> extends EquipoBuilder {}
+
+class Presupuesto {}
+
+class Componente <<Component, Leaf>> {}
+abstract class Gabinete extends Componente {}
+class GabineteEstandar extends Gabinete {}
+class GabineteIntermedio extends Gabinete {}
+class GabineteGamer <<Composite>> extends Gabinete {}
+
+class Catalogo {}
+
+class Tecnico {}
+
+GabineteGamer --> Componente: - componentes *
+
+EquipoBasicoBuilder ..> Equipo
+EquipoIntermedioBuilder ..> Equipo
+EquipoGamerBuilder ..> Equipo
+
+Catalogo --> Componente: - componentes *
+
+Presupuesto -right-> Equipo
+
+Tecnico --> EquipoBuilder: constructor
+Tecnico -right-> Catalogo: catalogo
+
+@enduml
