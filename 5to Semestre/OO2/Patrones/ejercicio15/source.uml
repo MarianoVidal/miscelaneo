@@ -9,6 +9,7 @@ class Equipo {
 }
 
 abstract class EquipoBuilder <<Builder>> {
++EquipoBuilder(catalogo: Catalogo)
 +<<abstract>> colocarProcesador()
 +<<abstract>> colocarMemoriaRAM()
 +<<abstract>> colocarDisco()
@@ -17,9 +18,15 @@ abstract class EquipoBuilder <<Builder>> {
 +construirEquipo(): Equipo
 }
 
-class EquipoBasicoBuilder <<ConcreteBuilderA>> extends EquipoBuilder {}
-class EquipoIntermedioBuilder <<ConcreteBuilderB>> extends EquipoBuilder {}
-class EquipoGamerBuilder <<ConcreteBuilderC>> extends EquipoBuilder {}
+class EquipoBasicoBuilder <<ConcreteBuilderA>> extends EquipoBuilder {
++EquipoBasicoBuilder(catalogo: Catalogo)
+}
+class EquipoIntermedioBuilder <<ConcreteBuilderB>> extends EquipoBuilder {
++EquipoIntermedioBuilder(catalogo: Catalogo)
+}
+class EquipoGamerBuilder <<ConcreteBuilderC>> extends EquipoBuilder {
++EquipoGamerBuilder(catalogo: Catalogo)
+}
 
 class Presupuesto {
 -nombreSolicitante: String
@@ -38,10 +45,21 @@ class Componente <<Component, Leaf>> {
 +getConsumo(): Real
 }
 
-abstract class Gabinete extends Componente {}
-class GabineteEstandar extends Gabinete {}
-class GabineteIntermedio extends Gabinete {}
-class GabineteGamer <<Composite>> extends Gabinete {}
+interface IGabinete {
++<<abstract>> obtenerFuente(): Sring
+}
+class GabineteEstandar implements IGabinete {
++GabineteEstandar(precio: Real, consumo: Real)
+}
+class GabineteIntermedio implements IGabinete {
++EquipoIntermedioBuilder(precio: Real)
+}
+class GabineteGamer <<Composite>> implements IGabinete {
++GabineteGamer(precio: Real, consumo: Real)
++agregarComponente(c: Componente)
++quitarComponente(c: Componente)
++obtenerConsumoComponentes(): Real
+}
 
 class Catalogo {
 +getComponente(descripcion: String): Componente
@@ -56,11 +74,11 @@ EquipoIntermedioBuilder ..> Equipo
 EquipoGamerBuilder ..> Equipo
 
 Equipo --> Componente: - componentes *
-Catalogo -right-> Componente: - componentes *
+Catalogo --> Componente: - componentes *
 
-Presupuesto -up-> Equipo
+Presupuesto --> Equipo
 
 Tecnico --> EquipoBuilder: constructor
-Tecnico -left-> Catalogo: catalogo
-
+Tecnico --> Catalogo: catalogo
+EquipoBuilder --> Catalogo: catalogo
 @enduml
