@@ -1,0 +1,29 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+interface WeatherData <<Component>> {
++<<abstract>> getTemperatura(): Real 
++<<abstract>> getPresion(): Real 
++<<abstract>> getRadiacionSolar(): Real 
++<<abstract>> getTemperaturas(): Real[*] 
++<<abstract>> displayData(): String
+}
+
+class HomeWeatherStation <<ConcreteComponent>> implements WeatherData {}
+
+abstract class WeatherDecorator <<Decorator>> implements WeatherData {
++calcularPromedioHistorico(): Real
++calcularMinimoHistorico(): Real
++calcularMaximoHistorico(): Real
++getComponente(): WeatherData
+}
+
+class WeatherDecoratorCelsius extends WeatherDecorator {}
+class WeatherDecoratorPromedio extends WeatherDecorator {}
+class WeatherDecoratorMinimo extends WeatherDecorator {}
+class WeatherDecoratorMaximo extends WeatherDecorator {}
+
+WeatherDecorator -left-> HomeWeatherStation: -componente
+
+@enduml
