@@ -1,0 +1,51 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class SistemaJuego <<Director>> {}
+
+abstract class PersonajeBuilder <<Builder>> {
++PersonajeBuilder(personaje: Personaje)
++<<abstract>> colocarArmadura()
++<<abstract>> colocarArma()
++<<abstract>> colocarHabilidades()
++construirPersonaje(): Personaje
+#obtenerPersonaje()
+}
+
+class PersonajeGuerreroBuilder <<ConcreteBuilderA>> extends PersonajeBuilder {
++PersonajeGuerreroBuilder(personaje: Personaje)
++colocarArmadura()
++colocarArma()
++colocarHabilidades()
+}
+class PersonajeArqueroBuilder <<ConcreteBuilderB>> extends PersonajeBuilder {
++PersonajeArqueroBuilder(personaje: Personaje)
++colocarArmadura()
++colocarArma()
++colocarHabilidades()
+}
+class PersonajeMagoBuilder <<ConcreteBuilderC>> extends PersonajeBuilder {
++PersonajeMagoBuilder(personaje: Personaje)
++colocarArmadura()
++colocarArma()
++colocarHabilidades()
+}
+
+class Personaje <<Product>> {
+-nombre: String
+-vida: Integer
+}
+
+abstract class Armadura {}
+abstract class Arma {}
+abstract class Habilidad {}
+
+SistemaJuego -right-> PersonajeBuilder: constructor
+PersonajeBuilder -right-> Personaje: producto
+
+Personaje -up-> Armadura: armadura
+Personaje -right-> Arma: arma
+Personaje -down-> Habilidad: habilidades 0..*
+
+@enduml
