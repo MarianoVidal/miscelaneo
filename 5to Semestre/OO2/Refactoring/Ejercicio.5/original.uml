@@ -1,0 +1,59 @@
+@startuml
+
+class Cliente {
+-tipo: String
+-nombre: String
+-numeroTelefono: String
+-cuit: String
+-dni: String
++getTipo(): String
++setTipo(tipo: String)
++getNombre(): String
++setNombre(nombre: String)
++getNumeroTelefono(): String
++setNumeroTelefono(numeroTelefono: String)
++getCuit(): String
++setCuit(cuit: String)
++getDNI(): String
++setDNI(dni: String)
+}
+
+class Empresa {
+-descuentoJur: Real
+-descuentoFis: Real
++agregarNumeroTelefono(str: String): Boolean
++obtenerNumeroLibre(): String
++registrarUsuario(data: String, nombre: String, tipo: String): Cliente
++registrarLlamada(origen: Cliente, destino: Cliente, t: String, duracion: Integer): Llamada
++calcularMontoTotalLlamadas(cliente: Cliente): Real
++cantidadDeUsuarios(): Integer
++existeUsuario(persona: Cliente): Boolean
++getGestorNumeros(): GestorNumerosDisponibles
+}
+
+class Llamada {
+-tipoDeLlamada: String
+-origen: String
+-destino: String
+-duracion: Integer
++Llamada(tipoLlamada: String, origen: String, destino: String, duracion: Integer)
++getTipoDeLlamada(): String
++getRemitente(): String
++getDuracion(): Integer
++getOrigen(): String
+}
+
+class GestorNumerosDisponibles {
+-lineas: SortedSet<String>
+-tipoGenerador: String
++getLineas(): SortedSet<String>
++obtenerNumeroLibre(): String
++cambiarTipoGenerador(valor: String)
+}
+
+Cliente --> Llamada: llamadas 0..*
+Empresa -left-> Cliente: clientes 0..*
+Empresa --> Llamada: llamadas 0..*
+Empresa --> GestorNumerosDisponibles: guia
+
+@enduml
