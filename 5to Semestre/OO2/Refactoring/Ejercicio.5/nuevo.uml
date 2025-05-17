@@ -1,0 +1,98 @@
+@startuml
+
+class Cliente <<Product>> {
+-tipo: String
+-nombre: String
+-numeroTelefono: String
++getNombre(): String
++setNombre(nombre: String)
++getNumeroTelefono(): String
++setNumeroTelefono(numeroTelefono: String)
++<<abstract>> getDescuento(monto: Real): Real
+}
+
+class Empresa {
++agregarNumeroTelefono(str: String): Boolean
++obtenerNumeroLibre(): String
++registrarUsuario(data: String, nombre: String, constructor: IConstructorCliente): Cliente
++registrarLlamada(origen: Cliente, destino: Cliente, duracion: Integer, constructor: IConstructorLlamada): Llamada
++calcularMontoTotalLlamadas(cliente: Cliente): Real
++cantidadDeUsuarios(): Integer
++existeUsuario(persona: Cliente): Boolean
++getGestorNumeros(): GestorNumerosDisponibles
+}
+
+class Llamada <<Product>> {
+-origen: Cliente
+-destino: Cliente
+-duracion: Integer
+#precio: Integer
++Llamada(origen: Cliente, destino: Cliente, duracion: Integer)
++getRemitente(): Cliente
++getDuracion(): Integer
++getOrigen(): Cliente
++calcularMonto(): Real
+}
+
+class GestorNumerosDisponibles {
+-lineas: SortedSet<String>
++getLineas(): SortedSet<String>
++obtenerNumeroLibre(): String
++cambiarGenerador(generador: IGenerador)
++agregarNumeroTelefonico(str: String): Boolean
+}
+
+class LlamadaNacional extends Llamada {}
+class LlamadaInternacional extends Llamada {}
+
+interface IGenerador <<Strategy>> {}
+
+class GeneradorPrimero <<ConcreteStrategyA>> implements IGenerador {}
+class GeneradorRandom <<ConcreteStrategyB>> implements IGenerador {}
+class GeneradorUltimo <<ConcreteStrategyC>> implements IGenerador {}
+
+interface IConstructorCliente <<Builder>> {
++<<abstract>> setNombre(nombre: String)
++<<abstract>> setNumeroTelefonico(nombre: String)
++<<abstract>> setIdentificador(identificador: String)
++<<abstract>> construirCliente(): Cliente
+}
+
+class ConstructorClienteFisico <<ConcreteBuilderA>> implements IConstructorCliente {}
+class ConstructorClienteJuridico <<ConcreteBuilderB>> implements IConstructorCliente {}
+
+abstract class ConstructorLlamada <<Builder>> {
+#origen: Cliente
+#destino: Cliente
+#duracion: Integer
++setOrigen(cliente: Cliente)
++setDestino(destino: Cliente)
++setDuracion(duracion: Integer)
++<<abstract>> construirLlamada(): Llamada
+}
+
+class ConstructorLlamadaNacional <<ConcreteBuilderC>> extends ConstructorLlamada {}
+class ConstructorLlamadaInternacional <<ConcreteBuilderD>> extends ConstructorLlamada {}
+
+class ClienteFisico extends Cliente {
+-dni: String
++setDni(dni: String)
++getDni(): String
+}
+
+class ClienteJuridico extends Cliente {
+-cuit: String
++setCuit(cuit: String)
++getCuit(): String
+}
+
+IConstructorCliente -left-> Cliente
+ConstructorLlamada -up-> Llamada
+
+Cliente --> Llamada: llamadas 0..*
+Empresa -left-> Cliente: clientes 0..*
+Empresa --> Llamada: llamadas 0..*
+Empresa --> GestorNumerosDisponibles: guia
+GestorNumerosDisponibles -right-> IGenerador: generador
+
+@enduml
