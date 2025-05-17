@@ -1,23 +1,17 @@
 package ar.edu.unlp.info.oo2.facturacion_llamadas;
 
-public class Llamada {
-	private String tipoDeLlamada;
-	private String origen;
-	private String destino;
+public abstract class Llamada {
+	private Cliente origen;
+	private Cliente destino;
 	private int duracion;
 
-	public Llamada(String tipoLlamada, String origen, String destino, int duracion) {
-		this.tipoDeLlamada = tipoLlamada;
+	public Llamada(Cliente origen, Cliente destino, int duracion) {
 		this.origen= origen;
 		this.destino= destino;
 		this.duracion = duracion;
 	}
 
-	public String getTipoDeLlamada() {
-		return tipoDeLlamada;
-	}
-
-	public String getRemitente() {
+	public Cliente getRemitente() {
 		return destino;
 	}
 
@@ -25,7 +19,14 @@ public class Llamada {
 		return this.duracion;
 	}
 
-	public String getOrigen() {
+	public Cliente getOrigen() {
 		return origen;
 	}
+	
+	public double calcularMonto() {
+		double monto = this.getDuracion() * this.getPrecio() + (this.getDuracion() * this.getPrecio() * 0.21);
+		return monto;
+	}
+	
+	public abstract double getPrecio();
 }
