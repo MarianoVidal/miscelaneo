@@ -33,14 +33,14 @@ class Empresa {
 
 class Llamada {
 -tipoDeLlamada: String
--origen: String
--destino: String
+-origen: Cliente
+-destino: Cliente
 -duracion: Integer
-+Llamada(tipoLlamada: String, origen: String, destino: String, duracion: Integer)
++Llamada(tipoLlamada: String, origen: Cliente, destino: Cliente, duracion: Integer)
 +getTipoDeLlamada(): String
-+getRemitente(): String
++getRemitente(): Cliente
 +getDuracion(): Integer
-+getOrigen(): String
++getOrigen(): Cliente
 }
 
 class GestorNumerosDisponibles {
