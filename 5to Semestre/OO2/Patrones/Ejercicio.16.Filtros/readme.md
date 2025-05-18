@@ -22,3 +22,11 @@
 - Se utiliza el patrón Decorator.
 - a. Si, se distingue, aunque no hay ningún DecoradorConcreto
 - b. Creo que sí.
+## Inciso C
+![Diagrama UML 3](./diag_uml_3.png)<br>
+[Código UML 3](./source3.uml)
+### Notas
+- Se debe encontrar una forma de armar una secuencia de filtros de manera que se respeten las reglas dadas.
+- Esto se podría controlar en tiempo de ejecución con estructuras de control, pero más fácil podría ser utilizar el patrón Builder y controlar la construcción de las secuencias de filtros de uno u otro tipo.
+- El patrón Builder no siento que se haya aplicado de manera correcta o completa, porque los únicos pasos que comparten ambos constructores son el final, el de construcción de la secuencia. Pero encapsular y separar el proceso de construcción de una secuencia, y generalizar o reutilizar el comportamiento que se reusa es un beneficio.
+- Podría declarar todos los métodos en la interfaz y pedir que se implementen en ambos constructores, así aumentaría la transparencia, pero habrían muchos métodos vacíos y siento que es mas de lo que se pide para el ejercicio.
