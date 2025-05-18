@@ -30,3 +30,4 @@
 - Esto se podría controlar en tiempo de ejecución con estructuras de control, pero más fácil podría ser utilizar el patrón Builder y controlar la construcción de las secuencias de filtros de uno u otro tipo.
 - El patrón Builder no siento que se haya aplicado de manera correcta o completa, porque los únicos pasos que comparten ambos constructores son el final, el de construcción de la secuencia. Pero encapsular y separar el proceso de construcción de una secuencia, y generalizar o reutilizar el comportamiento que se reusa es un beneficio.
 - Podría declarar todos los métodos en la interfaz y pedir que se implementen en ambos constructores, así aumentaría la transparencia, pero habrían muchos métodos vacíos y siento que es mas de lo que se pide para el ejercicio.
+- Para consultar: ¿Está bien planteada la solución?
