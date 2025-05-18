@@ -10,3 +10,4 @@
     - ¿Utilizar Double Dispatch para obtener polimórficamente el valor deseado en cierto caso?
   - Como construir las diferentes configuraciones de personajes, que siguen los mismos pasos ⟶ _Cuestion de diseño_
     - Patrón **Builder**
+  - Para consultar: Cómo hacer que funcione el Double Dispatch con las armas y las armaduras
