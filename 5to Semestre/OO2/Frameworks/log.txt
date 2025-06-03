@@ -1,0 +1,176 @@
+
+may 30, 2025 12:37:06 P. M. ar.edu.unlp.oo1.ejercicio1.ui.WallPostUI lambda$1
+INFORMACIÓN: El usuario dió un dislike
+SE INICIÓ LA APLICACIÓNEL USUARIO DIÓ UN LIKEEL USUARIO DIÓ UN DISLIKEEL USUARIO DIÓ UN LIKEEL USUARIO DIÓ UN DISLIKEINFO
+SE INICIÓ LA APLICACIÓN
+WARNING
+SE LLEGÓ A LA CANTIDAD DE LIKES 0
+INFO
+EL USUARIO DIÓ UN DISLIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO DIÓ UN DISLIKE
+INFO
+EL USUARIO DIÓ UN LIKE
+INFO
+EL USUARIO CLIQUEÓ EL CHECKBOX
+INFO
+EL USUARIO CLIQUEÓ EL CHECKBOX
+INFO
+EL USUARIO INSERTÓ UN TEXTO
+INFO
+EL USUARIO INSERTÓ UN TEXTO
+INFO
+EL USUARIO BORRÓ UN CARÁCTER
+INFO
+EL USUARIO BORRÓ UN CARÁCTER
+{ "message": "Se inició la aplicación", "level": INFO" }{ "message": "Se inició la aplicación", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "El usuario cliqueó el checkbox", "level": INFO" }
+{ "message": "El usuario cliqueó el checkbox", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario borró un carácter", "level": INFO" }
+{ "message": "Se inició la aplicación", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "Se inició la like", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "Se inició la like", "level": INFO" }
+{ "message": "El usuario dió un like", "level": INFO" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "Se llegó a la cantidad de likes 0", "level": WARNING" }
+{ "message": "El usuario dió un dislike", "level": INFO" }
+{ "message": "El usuario cliqueó el checkbox", "level": INFO" }
+{ "message": "El usuario cliqueó el checkbox", "level": INFO" }
+{ "message": "El usuario cliqueó el checkbox", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+{ "message": "El usuario insertó un texto", "level": INFO" }
+INFO: Se inició la like
+INFO: El usuario dió un like
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+INFO: El usuario dió un like
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un dislike
+INFO: El usuario dió un dislike
+INFO: El usuario dió un dislike
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un like
+INFO: El usuario dió un dislike
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
+WARNING: Se llegó a la cantidad de likes 0
+INFO: El usuario dió un dislike
